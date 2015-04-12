@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add a New Note</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Form</h1>
+<form action="#" th:action="@{/notes}" th:object="${note}" method="post">
+
+    <p>Note:
+        <input type="text" th:field="*{content}" />
+    </p>
+
+    <p>Author:
+        <input type="text" th:field="*{author}" />
+    </p>
+
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>

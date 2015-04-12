@@ -1,0 +1,5 @@
+<tr th:each="note : ${notes}" xmlns:th="http://www.w3.org/1999/xhtml">
+    <td th:text="${note.id}">1</td>
+    <td><a href="show.html" th:href="@{'/notes/' + ${note.id}}" th:text="${note.content}">Title ...</a></td>
+    <td th:text="${note.author}">Text ...</td>
+</tr>
